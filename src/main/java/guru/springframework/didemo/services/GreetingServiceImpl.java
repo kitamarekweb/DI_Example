@@ -8,7 +8,7 @@ import org.springframework.stereotype.Service;
 //Action: Consider defining a bean of type 'guru.springframework.didemo.services.GreetingService' in your configuration.
 public class GreetingServiceImpl implements GreetingService {
 
-    public static final String HELLO_GURUS = "Hello Gurus!!";
+    public static final String HELLO_GURUS = "Hello Gurus!! - ORIGINAL";
 
     @Override
     public String sayGreeting() {

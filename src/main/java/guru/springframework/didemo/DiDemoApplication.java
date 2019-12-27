@@ -18,6 +18,8 @@ public class DiDemoApplication {
 
         controller.hello();
 
+        System.out.println(controller.hello());
+
         System.out.println("PropertyInjectedController: " + ctx.getBean(PropertyInjectedController.class).sayHello());
         //Exception in thread "main" org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'guru.springframework.didemo.controllers.PropertyInjectedController' available
         // jest wtedy jesli nie zrobimy adnotacji na klasie ze ma byc @Component

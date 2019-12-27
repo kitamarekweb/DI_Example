@@ -27,6 +27,8 @@ public class PropertyInjectedController {
     //to przez refleksje spring potrafi sobie to polaczyc i nie trzeba robic qualifajerow!!!!!!!!
     //jest to SKROT MYSLOWY i ktos moze nie rozumiec co sie dzieje wiec qualifiry sa lepsze pod katem czytania kodu
     @Autowired
+//    @Qualifier("greetingServiceImpl")
+    //jesli wykomentujemy qulifier to mimo ze reflksja pojdzie do GreetingServiceImpl to i tak na wierzchu bedzie serwis z @Primary i to to zostanie wyswietlone
     public GreetingService greetingServiceImpl;
 
     public String sayHello() {
