@@ -18,7 +18,7 @@ public class DiDemoApplication {
 
         controller.hello();
 
-        System.out.println("PropertyInjectedControlle: " + ctx.getBean(PropertyInjectedController.class).sayHello());
+        System.out.println("PropertyInjectedController: " + ctx.getBean(PropertyInjectedController.class).sayHello());
         //Exception in thread "main" org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'guru.springframework.didemo.controllers.PropertyInjectedController' available
         // jest wtedy jesli nie zrobimy adnotacji na klasie ze ma byc @Component
 
@@ -26,9 +26,9 @@ public class DiDemoApplication {
         // jest wtedy kiedy ZROBIMY adnotacje na klasie ze ma byc @Component
         //zeby to naprawic musimy do pola dodac adnotacje @Autowired, musimy wstrzyknac
 
-        System.out.println("SetterInjectedControlle: " + ctx.getBean(SetterInjectedController.class).sayHello());
+        System.out.println("SetterInjectedController: " + ctx.getBean(SetterInjectedController.class).sayHello());
 
-        System.out.println("ConstructorInjectedControlle: " + ctx.getBean(ConstructorInjectedController.class).sayHello());
+        System.out.println("ConstructorInjectedController: " + ctx.getBean(ConstructorInjectedController.class).sayHello());
     }
 
 }
