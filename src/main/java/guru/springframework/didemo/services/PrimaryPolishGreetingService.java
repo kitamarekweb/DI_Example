@@ -1,5 +1,6 @@
 package guru.springframework.didemo.services;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -9,8 +10,14 @@ import org.springframework.stereotype.Service;
 @Primary
 public class PrimaryPolishGreetingService implements GreetingService {
 
+    private GreetingService greetingService;
+
+    public PrimaryPolishGreetingService(@Qualifier("getterGreetingService") GreetingService greetingService) {
+        this.greetingService = greetingService;
+    }
+
     @Override
     public String sayGreeting() {
-        return "Dzien dobry bardzo - Polish Greeting";
+        return greetingService.sayGreeting();
     }
 }
