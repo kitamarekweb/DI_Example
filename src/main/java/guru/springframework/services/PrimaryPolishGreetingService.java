@@ -1,4 +1,4 @@
-package guru.springframework.didemo.services;
+package guru.springframework.services;
 
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Primary;
@@ -6,13 +6,13 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 @Service
-@Profile("es")
+@Profile({"pl", "default"})
 @Primary
-public class PrimarySpanishGreetingService implements GreetingService {
+public class PrimaryPolishGreetingService implements GreetingService {
 
     private GreetingService greetingService;
 
-    public PrimarySpanishGreetingService(@Qualifier("greetingServiceImpl") GreetingService greetingService) {
+    public PrimaryPolishGreetingService(@Qualifier("getterGreetingService") GreetingService greetingService) {
         this.greetingService = greetingService;
     }
 

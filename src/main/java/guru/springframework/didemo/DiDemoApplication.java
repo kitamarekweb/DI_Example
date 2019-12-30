@@ -7,8 +7,20 @@ import guru.springframework.didemo.controllers.SetterInjectedController;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@ComponentScan(basePackages = {"guru.springframework"}) //to jest startowe miejsc i bedzie szukal dalej w glab, schodzil nizej
+//problem: po przeniesieniu katalogu z servisami o jeden wyzej nie mozna bylo zlapac serwsow, rozwiazaniem jest skanowanie komponetow @ComponentScan
+//Parameter 0 of constructor in guru.springframework.didemo.controllers.ConstructorInjectedController required a bean of type 'guru.springframework.services.GreetingService' that could not be found.
+//
+//The injection point has the following annotations:
+//	- @org.springframework.beans.factory.annotation.Qualifier(value=constructorGreetingService)
+//
+//
+//Action:
+//
+//Consider defining a bean of type 'guru.springframework.services.GreetingService' in your configuration.
 public class DiDemoApplication {
 
     public static void main(String[] args) {
