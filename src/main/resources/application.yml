@@ -1,0 +1,6 @@
+# w YAML bardzo wazne sa spacje i odleglosci
+guru:
+  jms:
+    username: JMS Username
+    password: somepass
+    url: SomeUrl
